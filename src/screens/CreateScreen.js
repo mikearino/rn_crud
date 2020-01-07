@@ -22,7 +22,11 @@ const CreateScreen = ({ navigation }) => {
         style={styles.inputStyle}
       />
       <Button
-        onPress={() => addBlogPost(title, content)}
+        onPress={() =>
+          addBlogPost(title, content, () => {
+            navigation.navigate("Index");
+          })
+        }
         title="Add Blog Post"
       />
     </View>
